@@ -35,7 +35,7 @@ export class AppComponent {
     {name: 'App 9', children: []},
     {name: 'App 10'}
   ];
-  public appCards = Array.from({length: 25}).map((_, index) => ({id: v4(), name: 'App' + (index + 1)}));
+  public appCards = Array.from({length: 25}).map((_, index) => ({id: v4(), name: 'App' + (index + 11)}));
   public state: ITreeState = {expandedNodeIds: {1: true, 2: true, 3: true}, hiddenNodeIds: {}, activeNodeIds: {}};
   public options: ITreeOptions = {
     allowDrag: true,

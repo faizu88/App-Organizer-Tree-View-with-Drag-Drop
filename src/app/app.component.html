@@ -1,0 +1,45 @@
+<div class="parent-container">
+  <header>
+    <div class="heading">App Organizer</div>
+  </header>
+  <div id="content-container">
+    <!------------------------------ Left View ------------------------------>
+    <nav>
+      <div class="tree-container">
+        <div class="tree-node-label" *ngIf="treenodes.length===0"> Drop Nodes Here</div>
+        <tree-root #tree [state]="state"
+                   [options]="options"
+                   [focused]="true"
+                   (moveNode)="onMoveNode($event)"
+                   [nodes]="treenodes">
+          <ng-template #treeNodeTemplate let-node let-index="index">
+
+              <div class="tree-node-item">
+                <mat-icon>folder_open</mat-icon> <span>{{ node.data.name }}</span>
+              </div>
+
+          </ng-template>
+        </tree-root>
+      </div>
+    </nav>
+    <!------------------------------ Left View ------------------------------>
+
+    <!------------------------------ Right View ------------------------------>
+    <article>
+      <div class="card-container">
+      <!--  <mat-card class="card app-drop-container" (treeDrop)="onAppDrop($event)">
+          Drop Apps Here
+        </mat-card>-->
+        <mat-card class="card" *ngFor="let card of appCards" [treeDrag]="card" [treeDragEnabled]="true">
+          <mat-card-header>
+            <mat-card-title>{{card?.name}}</mat-card-title>
+            <mat-card-subtitle>Drag</mat-card-subtitle>
+          </mat-card-header>
+        </mat-card>
+      </div>
+    </article>
+    <!------------------------------ Right View ------------------------------>
+  </div>
+  <footer></footer>
+</div>
+

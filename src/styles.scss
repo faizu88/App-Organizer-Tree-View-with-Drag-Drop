@@ -1,0 +1,21 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import '~@circlon/angular-tree-component/css/angular-tree-component.css';
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.node-drop-slot {
+  display: block;
+  height: 8px;
+}
+
+.empty-tree-drop-slot .node-drop-slot {
+  height: 50px;
+  min-width: 100px;
+}

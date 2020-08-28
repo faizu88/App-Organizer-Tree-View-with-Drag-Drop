@@ -1,0 +1,88 @@
+.parent-container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: 0;
+}
+
+header {
+  height: 50px;
+
+  .heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+  }
+}
+
+#content-container {
+  display: flex;
+  flex: 1;
+
+  nav {
+    flex: 0 0 250px;
+    order: -1;
+    border-right: 1px solid #3d966d;
+    padding: 1em;
+  }
+
+  article {
+    flex: 1;
+    padding: 1em;
+  }
+}
+
+header, footer {
+  background: #3d966d;
+}
+
+footer {
+  height: 25px;
+}
+
+.tree-node-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #7a7a7a;
+}
+
+.tree-node-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > *:first-child {
+    margin-right: 3px;
+  }
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+
+  .card {
+    width: 180px;
+    height: 75px;
+    margin: 0 10px 10px;
+    background-color: #3d966d14;
+  }
+}
+
+.app-drop-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 175px !important;
+  height: 70px !important;
+  background-color: #3d966d14;
+  color: #7a7a7a;
+  border: 3px dashed #ccc;
+}
+
+.tree-drop-container.is-dragging-over {
+  background: #ddffee;
+  box-shadow: inset 0 0 1px #999;
+}
